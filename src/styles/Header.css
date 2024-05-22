@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.mainhome-header {
+  position: sticky;
+  top: 0;
+  height: 150px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-image: linear-gradient(rgb(231, 212, 235), rgb(69, 157, 239));
+  color: rgb(0, 0, 0);
+}
+
+.mainhome-logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+.mainhome-logo h1 {
+  margin: 0;
+  font-size: 3rem;
+  display: block;
+}
+
+.mainhome-logo img {
+  width: 150px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add spacing between logo and text */
+}
+
+.mainhome-nav-links {
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 200px; /* Set your desired width */
+  position: fixed;
+  top: 80px;
+  left: -200px; /* Off-screen initially */
+  bottom: 0;
+  background-color: rgb(242, 237, 237);
+  padding-top: 10px; /* Account for header height */
+  transition: left 0.3s ease; /* Smooth transition effect */
+}
+
+.mainhome-nav-links.open {
+  left: 0; /* Slide in from left when open */
+}
+
+.mainhome-nav-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 14px 16px;
+  top: 0;
+  font-size: 18px;
+}
+.mainhome-nav-links a:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.mainhome-menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile view */
+@media (min-width: 769px) {
+  .mainhome-menu-icon {
+    display: none; /* Hide hamburger icon on larger screens */
+  }
+
+  .mainhome-nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    padding-top: 0;
+    left: 0;
+    width: auto;
+  }
+
+  .mainhome-nav-links a {
+    padding: 5px 5px; /* Adjust spacing */
+  }
+}
+
+@media (max-width: 980px) {
+  .mainhome-header {
+    height: 80px;
+  }
+
+  .mainhome-logo h1 {
+    font-size: 2rem;
+  }
+  .mainhome-logo img {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainhome-header {
+    height: 80px;
+  }
+
+  .mainhome-logo h1 {
+    font-size: 1.5rem;
+  }
+  .mainhome-logo img {
+    display: none;
+  }
+}

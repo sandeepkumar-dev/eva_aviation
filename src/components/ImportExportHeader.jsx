@@ -16,7 +16,7 @@ const ImportExportHeader = () => {
   return (
     <header className={`academy-header ${isMenuOpen ? 'menu-open' : ''}`}>
       <div className="ie-academy-logo2">
-        <img src="../images/logo2.jpg" alt=" Logo2" />
+        <img src="./images/logo2.jpg" alt=" Logo2" />
         <h1>Eva Aviation Import & Export</h1>
       </div>
       <nav className={`academy-nav-links ${isMenuOpen ? 'open' : ''}`}>
